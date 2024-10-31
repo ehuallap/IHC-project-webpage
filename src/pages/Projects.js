@@ -31,10 +31,20 @@ const useStyles = makeStyles(() => ({
     height: 140,
   },
   additionalInfo: {
-    marginTop: '1rem',
+    position: 'fixed', // Posición fija
+    top: '50%', // Centro vertical
+    left: '50%', // Centro horizontal
+    transform: 'translate(-50%, -50%)', // Centrar el cuadro
     padding: '1rem',
     backgroundColor: '#333333',
     color: 'white',
+    zIndex: 1000, // Asegura que el cuadro esté encima del contenido
+    maxWidth: '80%', // Ajuste el ancho máximo
+    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.5)', // Sombra para mejor visualización
+    display: 'none', // Por defecto oculto
+  },
+  additionalInfoVisible: {
+    display: 'block', // Mostrar cuando sea visible
   },
   button: {
     marginTop: '2rem',
@@ -52,7 +62,7 @@ const projects = [
     title: 'Proyecto del videojuego Monkey Fight',
     description: 'Videojuego desarrollado en Roblox donde 2 equipos luchan por ser el bando dominante.',
     image: 'https://via.placeholder.com/150',
-    details: 'El proyecto desarrollado en este videojuego en realidad virtual (VR) tiene como objetivo principal que los usuarios, representados como monos, jueguen en equipo o de forma individual, peleando entre ellos con diferentes armas. En este documento se detallarán las dos versiones del juego presentadas, con sus respectivos comentarios de los usuarios y las mejoras implementadas por los desarrolladores. \nMonkeyFigth es un juego multijugador de pelea, donde los personajes compiten entre sí hasta matar al otro. Deben recoger plátanos para mejorar armas y habilidades. también corazones si quieren seguir vivos ;) y recuperar vida.',
+    details: 'El proyecto desarrollado en este videojuego en realidad virtual (VR) tiene como objetivo principal que los usuarios, representados como monos, jueguen en equipo o de forma individual, peleando entre ellos con diferentes armas. En este documento se detallarán las dos versiones del juego presentadas, con sus respectivos comentarios de los usuarios y las mejoras implementadas por los desarrolladores. \nMonkeyFight es un juego multijugador de pelea, donde los personajes compiten entre sí hasta matar al otro. Deben recoger plátanos para mejorar armas y habilidades. también corazones si quieren seguir vivos ;) y recuperar vida.',
   },
   {
     title: 'Proyecto de ejercicios Monkans',
@@ -105,7 +115,7 @@ export const Projects = () => {
               </CardContent>
             </Card>
             <Collapse in={selectedProject === index}>
-              <div className={classes.additionalInfo}>
+              <div className={`${classes.additionalInfo} ${selectedProject === index ? classes.additionalInfoVisible : ''}`}>
                 <Typography variant="body2">
                   {project.details}
                 </Typography>
