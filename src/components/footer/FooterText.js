@@ -26,14 +26,14 @@ export const FooterText = () => {
     <Link
       color='inherit'
       underline='none'
-      href='https://github.com/sponsors/JoHoop'
+      href='https://dina.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=14818'
       target='_blank'
       rel='noopener noreferrer'
       className={classes.footerText}
     >
       <HeartIcon />
       <Typography variant='body1'>
-        <TextDecrypt text={' Sponsor'} />
+        <TextDecrypt text={'Ana Maria Cuadros Valdivia'} />
       </Typography>
     </Link>
   );
