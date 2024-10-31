@@ -1,4 +1,4 @@
-export default `
+const fragmentShaderSource = `
 #define PHONG
 
 uniform vec3 diffuse;
@@ -65,8 +65,10 @@ void main() {
   #include <premultiplied_alpha_fragment>
   #include <tonemapping_fragment>
   #include <encodings_fragment>
-  #include <fog_fragment>
+  #include <fog_fragment>;
 
   gl_FragColor = vec4(outgoingLight, diffuseColor.a);
 }
 `;
+
+export default fragmentShaderSource;
