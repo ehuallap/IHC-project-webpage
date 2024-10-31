@@ -1,15 +1,14 @@
 import React, { lazy } from "react";
-
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Cambiar Switch a Routes
 import { HelmetMeta } from "./HelmetMeta";
 import { ThemeProvider } from "../components/theme/ThemeProvider";
 import { CssBaseline } from "@material-ui/core";
 import { logCredits } from "../utils/logCredits";
 
 import { Home } from "../pages/Home";
-
-const Resume = lazy(() => import("../pages/Resume"));
-const PageNotFound = lazy(() => import("../pages/PageNotFound"));
+import { Projects } from "../pages/Projects";
+import { Resume } from "../pages/Resume";
+import { PageNotFound } from "../pages/PageNotFound";
 
 export const App = () => {
     logCredits();
@@ -19,11 +18,12 @@ export const App = () => {
             <CssBaseline />
             <Router>
                 <HelmetMeta />
-                <Switch>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/resume" component={Resume} />
-                    <Route path="*" component={PageNotFound} />
-                </Switch>
+                <Routes> {/* Cambiar Switch a Routes */}
+                    <Route path="/" element={<Home />} /> {/* Cambiar component a element */}
+                    <Route path="/resume" element={<Resume />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="*" element={<PageNotFound />} />
+                </Routes>
             </Router>
         </ThemeProvider>
     );
