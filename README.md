@@ -1,31 +1,3 @@
-# Personal Website React
-
-[![Screenshot](/public/social-image.png?raw=true)](https://jolienhoop.com)
-
-[![Website jolienhoop.com](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://jolienhoop.com)
-[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/JoHoop/personal-website-react/blob/master/LICENSE)
-[![GitHub contributors](https://img.shields.io/github/contributors/JoHoop/personal-website-react.svg)](https://github.com/JoHoop/personal-website-react/graphs/contributors/)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/JoHoop/personal-website-react/graphs/commit-activity)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
-
-A clean, responsive, single-page webapp template for developers. View demo at [jolienhoop.com](https://jolienhoop.com)
-
--   built using [React](https://reactjs.org/)
--   bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
--   styled with [Material-UI](https://material-ui.com/)
--   deployed with [Vercel](https://vercel.com) and hosted at [jolienhoop.com](https://jolienhoop.com)
-
-Kudos to [Cody Bennett](https://github.com/CodyJasonBennett), [José Coelho](https://github.com/jcoelho93) and [Brittany Chiang](https://github.com/bchiang7) for the inspiration.
-
-## Features
-
--   All of the personal information is populated from the resume.json file following the [JSON Resume](https://jsonresume.org/) standard, a community driven open source initiative to create a JSON based standard for resumes. Discover the official schema [here](https://jsonresume.org/schema/).
--   The toggle/switch for the dark mode syncs its state to the local storage.
-
-#### Coming soon
-
--   Two beautiful resume page templates generated based on the data in the resume.json file -- a modern approach of the traditional printed CV.
--   Rich Google search results using structured data with [json-ld.org/](https://json-ld.org/).
 
 ## Customization
 
